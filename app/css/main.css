@@ -1,5 +1,8 @@
 @charset "UTF-8";
 /*Пример обьявления переменной*/
+.p-0 {
+  padding: 0px; }
+
 header {
   background-color: #ccc;
   text-align: center;
