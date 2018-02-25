@@ -3,9 +3,10 @@ $colortest: #fff ; /*Пример обьявления переменной*/
 header{
 	background-color: #ccc;
 	text-align: center;
-	height: 10vh;
+	height: 20vh;
 	color: #fff;
 	font-size: 32px;
+	margin-bottom: 25px;
 
 	nav{
 		padding: 0px;
@@ -35,21 +36,23 @@ header{
 .content{
 	background-color: $colortest;
 	text-align: center;
-	height: 80vh;
-	color: #fff;
+	height: 70vh;
+	color: #000;
 	font-size: 32px;
 	font-weight: 100;
+	align-items: center;
 
 	.imgAvatar{
 		img{
 			width: 100%;
+			height: auto;
 		}
 	}
 
 }
-footer{
+.footer{
 	background-color: #3c763d;
-	height: 10vh;
+	/*height: 10vh;*/
 	text-align: center;
 	color: #fff;
 	font-size: 32px;

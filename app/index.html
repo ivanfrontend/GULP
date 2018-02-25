@@ -3,13 +3,14 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!--  <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
     <title>Template</title>
 
     <!-- Подключение bootstrap -->
 
-    <link href="libs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="libs/bootstrap4/dist/css/bootstrap.min.css" rel="stylesheet">
 
      <!-- Конец подключения bootstrap -->
 
@@ -43,9 +44,9 @@
     <![endif]-->
   </head>
   <body>
-    
+  <div class="container-fluid">  
  <div class="row">
-   <div class="col-sm-12">
+   <div class="col-12">
      <header>
        <nav>
          <ul>
@@ -59,33 +60,41 @@
      </header>
    </div>
  </div>
- <div class="row">
-  <div class="content col-sm-12">
-     <div class="col-sm-4">text1</div>
-     <div class="col-sm-4"><div id="main">
+</div>
+ <div class="container-fluid ">
+ <div class="row content">
+  <!-- <div class="content col-12"> -->
+     <div class="col-4">text1</div>
+     <div class="col-4 ">
+      <div id="main">
         <div class="imgAvatar"><img src="img/1.jpg" alt="avatar"></div>
         <div class="imgAvatar"><img src="img/2.jpg" alt="avatar"></div>
         <div class="imgAvatar"><img src="img/2.jpg" alt="avatar"></div>
-     </div></div>
-     <div class="col-sm-4">text3</div>
+     </div>
    </div>
+     <div class="col-4">text3</div>
+   <!-- </div> -->
  </div>
- <div class="row">
-   <div class="col-sm-12">
-     <footer>footer</footer>
-   </div>
  </div>
+  <div class="container-fluid">
+ <div class="row footer justify-content-center">
+    <div class="col-sx-12 col-sm-6 col-lg-3 ">text</div>
+    <div class="col-sx-12 col-sm-6 col-lg-3 ">text</div>
+    <div class="col-sx-12 col-sm-6 col-lg-3 ">text</div>
+    <div class="col-sx-12 col-sm-6 col-lg-3 ">text</div>
+    <div class="col-sx-12 col-sm-6 col-lg-3 ">text</div>
+    <div class="col-sx-12 col-sm-6 col-lg-3 ">text</div>
+ </div>
+</div>
 
   <!-- Подключение jquery -->
 
     <script src="libs/jquery/dist/jquery.min.js"></script>
 
      <!-- Конец подключения jquery -->
-
+      
         <!-- Подключение слайдера slick.js-->
-
     <script type="text/javascript" src="libs/slick/slick.min.js"></script>
-
      <!-- Конец подключение слайдера slick.js-->
 
      <!-- my sj script -->
