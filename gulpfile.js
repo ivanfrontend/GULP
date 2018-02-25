@@ -14,34 +14,26 @@ var autoprefixer = require('gulp-autoprefixer');
 
 
 
-// Подключение Stylus 
+// Подключение scss 
 gulp.task('stylus', function () {
-	return gulp.src('app/stylus/*.sass')
+	return gulp.src('app/stylus/*.SCSS')
 	.pipe(stylus())
 	.pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
 	.pipe(gulp.dest('app/css'))
 	.pipe(browserSync.reload({stream: true}))
 });
 
-// // Сжатие Css в один файл
-// gulp.task('css-min', function() {
-// 	return gulp.src('app/css/*.css') 
-// 		.pipe(concat('styles.min.css')) 
-// 		.pipe(cssmin()) 
-// 		.pipe(gulp.dest('app/css')); 
-// });
 
 // Сжатие JS  
 gulp.task('scripts', function() {
 	return gulp.src([ 
-		'app/libs/jquery/dist/jquery.min.js', 
-		'app/libs/magnific-popup/dist/jquery.magnific-popup.min.js',
-		'app/libs/bootstrap/dist/bootstrap.min.js'
+		'app/js/*.js',
 		])
-		.pipe(concat('libs.min.js')) 
 		.pipe(uglify()) 
+		.pipe(rename({suffix: '.min'}))
 		.pipe(gulp.dest('app/js')); 
 });
+
 
 
 // Сжатие фотографий 
@@ -61,13 +53,15 @@ gulp.task('img', function() {
 // Сжатие Css 
 gulp.task('css-libs', ['stylus'], function() {
 	return gulp.src([
-		'app/libs/magnific-popup/dist/magnific-popup.css',
-		'app/libs/bootstrap/dist/css/bootstrap.css'
+		'app/css/main.css',
+		'app/css/media.css'
 		]) 
 		.pipe(cssnano()) 
 		.pipe(rename({suffix: '.min'})) 
 		.pipe(gulp.dest('app/css')); 
 });
+
+
 
 // Удаление папки Dist
 gulp.task('clean', function() {
@@ -80,8 +74,8 @@ gulp.task('clear', function (callback) {
 })
 
 // Watch-er за Stylus, Html, JS
-gulp.task('watch', ['browser-sync', 'css-libs', 'scripts'], function () {
-	gulp.watch('app/stylus/*.sass', ['stylus']);
+gulp.task('watch', ['browser-sync', 'scripts','css-libs'], function () {
+	gulp.watch('app/stylus/*.SCSS', ['stylus']);
 	gulp.watch('app/js/*.js', browserSync.reload);
 	gulp.watch('app/*.html', browserSync.reload);
 });
@@ -92,15 +86,22 @@ gulp.task('browser-sync', function () {
 		server: {
 			baseDir: 'app'
 		},
+		browser: 'chrome',
 		notify: false
 	});
 });
 
 
 // Build
-gulp.task('build', ['clean', 'img', 'stylus', 'css-min', 'scripts'], function() {
+gulp.task('build', ['clean', 'img', 'css-libs', 'stylus', 'scripts'], function() {
 
-	var buildCss = gulp.src('app/css/styles.min.css')
+	// var buildCss = gulp.src('app/css/styles.min.css')
+	// .pipe(gulp.dest('dist/css'))
+
+	var buildSlibs = gulp.src('app/libs/**/*')
+	.pipe(gulp.dest('dist/libs'))
+
+	var buildCss = gulp.src('app/css/*.css')
 	.pipe(gulp.dest('dist/css'))
 
 	var buildFonts = gulp.src('app/fonts/**/*') 

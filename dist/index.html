@@ -1,17 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    
     <title>Template</title>
 
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Подключение bootstrap -->
+
+    <link href="libs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+     <!-- Конец подключения bootstrap -->
+
+    <!-- оснавные настройки html -->
+    
+    <link href="css/reset.css" rel="stylesheet">
+
+    <!-- Конец основных настроек HTML -->
+
+    <!-- Подключение слайдера slick.css-->
+
+    <link rel="stylesheet" href="libs/slick/slick.css">
+
+    <link rel="stylesheet" href="libs/slick/slick-theme.css">
+
+    <!-- конец подключение слайдера slick.css -->
+
+    <!-- my css fail -->
+
     <link href="css/main.css" rel="stylesheet">
-    <!-- <link href="css/styles.min.css" rel="stylesheet">
- -->
+
+    <link href="css/media.css" rel="stylesheet">
+
+    <!-- end my css fail -->
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -20,14 +43,56 @@
     <![endif]-->
   </head>
   <body>
-    <h1>Hello, world! Анasdasdsadтон</h1>
+    
+ <div class="row">
+   <div class="col-sm-12">
+     <header>
+       <nav>
+         <ul>
+           <li>Home</li>
+           <li><a href="pageSlaider.html">Slaider</a></li>
+           <li>text3</li>
+           <li>text4</li>
+         </ul>
+       </nav>
+       <div>Главная страница</div>
+     </header>
+   </div>
+ </div>
+ <div class="row">
+  <div class="content col-sm-12">
+     <div class="col-sm-4">text1</div>
+     <div class="col-sm-4"><div id="main">
+        <div class="imgAvatar"><img src="img/1.jpg" alt="avatar"></div>
+        <div class="imgAvatar"><img src="img/2.jpg" alt="avatar"></div>
+        <div class="imgAvatar"><img src="img/2.jpg" alt="avatar"></div>
+     </div></div>
+     <div class="col-sm-4">text3</div>
+   </div>
+ </div>
+ <div class="row">
+   <div class="col-sm-12">
+     <footer>footer</footer>
+   </div>
+ </div>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/libs.min.js"></script>
+  <!-- Подключение jquery -->
+
+    <script src="libs/jquery/dist/jquery.min.js"></script>
+
+     <!-- Конец подключения jquery -->
+
+        <!-- Подключение слайдера slick.js-->
+
+    <script type="text/javascript" src="libs/slick/slick.min.js"></script>
+
+     <!-- Конец подключение слайдера slick.js-->
+
+     <!-- my sj script -->
+
     <script src="js/common.js"></script>
+
+   <!-- end my js script -->
 
   </body>
 </html>

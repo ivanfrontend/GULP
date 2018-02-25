@@ -1,0 +1,59 @@
+$colortest: #fff ; /*Пример обьявления переменной*/
+
+header{
+	background-color: #ccc;
+	text-align: center;
+	height: 10vh;
+	color: #fff;
+	font-size: 32px;
+
+	nav{
+		padding: 0px;
+		margin: 0px;
+		text-shadow: 1px 1px 3px #000;
+		
+
+		ul{
+			
+			padding: 0px;
+			margin: 0px;
+			text-align: center;
+
+			li{
+				display: inline-block;
+				padding: 20px 0px;
+				font-size: 16px;
+			}
+			li:hover{
+				color: #000;
+				padding: 0px;
+			}
+		}
+	}
+
+}
+.content{
+	background-color: $colortest;
+	text-align: center;
+	height: 80vh;
+	color: #fff;
+	font-size: 32px;
+	font-weight: 100;
+
+	.imgAvatar{
+		img{
+			width: 100%;
+		}
+	}
+
+}
+footer{
+	background-color: #3c763d;
+	height: 10vh;
+	text-align: center;
+	color: #fff;
+	font-size: 32px;
+	font-weight: 100;
+}
+
+	

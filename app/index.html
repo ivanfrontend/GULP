@@ -6,14 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     <title>Template</title>
+
+    <!-- Подключение bootstrap -->
+
+    <link href="libs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+     <!-- Конец подключения bootstrap -->
+
+    <!-- оснавные настройки html -->
     
     <link href="css/reset.css" rel="stylesheet">
 
+    <!-- Конец основных настроек HTML -->
+
+    <!-- Подключение слайдера slick.css-->
+
+    <link rel="stylesheet" href="libs/slick/slick.css">
+
+    <link rel="stylesheet" href="libs/slick/slick-theme.css">
+
+    <!-- конец подключение слайдера slick.css -->
+
+    <!-- my css fail -->
+
     <link href="css/main.css" rel="stylesheet">
 
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/media.css" rel="stylesheet">
 
-    <link href="css/magnific-popup.min.css" rel="stylesheet">
+    <!-- end my css fail -->
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -23,51 +43,56 @@
     <![endif]-->
   </head>
   <body>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-xs-12 text-center">
-          <div class="hello">
-            <h1>Привет, меня зовут Антон</h1>
-            <p>Моя первая сборка на Gulp, со временем она обязательно будет дорабатываться и улучшаться </p>
-          </div>
-        </div>
-        <div class="list text-center">
-          <p>Список технологий</p>
-          <div class="col-xs-6 caption">
-            <span>Css</span>
-            <ul>
-              <li>На данный момент я работаю с css препроцессором Stylus, пишу стили в нем и автоматически преобразовываю в css</li>
-              <li>Из библиотек я собираю css файлы и сжимаю  их </li>
-            </ul>
-          </div>
-          <div class="col-xs-6 caption">
-            <span>JS</span>
-            <ul>
-              <li>Из библиотек я собираю js файлы и сжимаю их</li>
-            </ul>
-          </div>
-          <div class="clear"></div>
-          <div class="col-xs-6 caption">
-            <span>Img</span>
-            <ul>
-              <li>Сжимаю фотографии перед build </li>
-            </ul>
-          </div>
-          <div class="col-xs-6 caption">
-            <span>Очистка</span>
-            <ul>
-              <li>Очистка Cache</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
     
-    
-    
-    
-    <script src="js/libs.min.js"></script>
+ <div class="row">
+   <div class="col-sm-12">
+     <header>
+       <nav>
+         <ul>
+           <li>Home</li>
+           <li><a href="pageSlaider.html">Slaider</a></li>
+           <li>text3</li>
+           <li>text4</li>
+         </ul>
+       </nav>
+       <div>Главная страница</div>
+     </header>
+   </div>
+ </div>
+ <div class="row">
+  <div class="content col-sm-12">
+     <div class="col-sm-4">text1</div>
+     <div class="col-sm-4"><div id="main">
+        <div class="imgAvatar"><img src="img/1.jpg" alt="avatar"></div>
+        <div class="imgAvatar"><img src="img/2.jpg" alt="avatar"></div>
+        <div class="imgAvatar"><img src="img/2.jpg" alt="avatar"></div>
+     </div></div>
+     <div class="col-sm-4">text3</div>
+   </div>
+ </div>
+ <div class="row">
+   <div class="col-sm-12">
+     <footer>footer</footer>
+   </div>
+ </div>
+
+  <!-- Подключение jquery -->
+
+    <script src="libs/jquery/dist/jquery.min.js"></script>
+
+     <!-- Конец подключения jquery -->
+
+        <!-- Подключение слайдера slick.js-->
+
+    <script type="text/javascript" src="libs/slick/slick.min.js"></script>
+
+     <!-- Конец подключение слайдера slick.js-->
+
+     <!-- my sj script -->
+
     <script src="js/common.js"></script>
+
+   <!-- end my js script -->
 
   </body>
 </html>
